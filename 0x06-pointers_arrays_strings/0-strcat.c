@@ -17,9 +17,12 @@ char *_strcat(char *dest, char *src)
 	{
 		length_of_string++;
 	}
-	for (z = 0; src[z] != '\0'; z++; length_of_string++)
+	z = 0;
+	while (src[z] != '\0')
 	{
 		dest[length_of_string] = src[z];
+		length_of_string++;
+		z++;
 	}
 	dest[length_of_string] = '\0';
 	return (dest);
